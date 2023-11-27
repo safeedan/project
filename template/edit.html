@@ -1,0 +1,20 @@
+{% extends 'bas.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    meta charset="UTF-8">
+    <title>edit</title>
+</head>
+<body>
+{% block body %}
+<center>
+<h1>Update Movie</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="update">
+</form>
+</center>
+{% endblock %}
+</body>
+</html>

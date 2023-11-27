@@ -1,0 +1,31 @@
+{% extends 'bas.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    meta charset="UTF-8">
+    <title>edit</title>
+</head>
+<body>
+{% block body %}
+<h1>Add Movie</h1>
+<center>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>name:</label>
+    <input type="text" name="name" placeholder="enter new movie" ><br> <br>
+    <label>desc:</label>
+    <input type="text" name="des" placeholder="enter description" ><br> <br>
+    <label >year:</label>
+    <input type="text" name="year" placeholder="enter year of movie" ><br> <br>
+    <label style="color:#EE9CA7;">e</label><label>image :  </label>
+    <input  type="file" name="img" ><br> <br>
+    <center>
+        <input class="btn btn-success" style="font-size:30px; width:100px;
+        height:50px;color:white;"  type="submit" value="add" >
+    </center>
+</form>
+<br><br><br><br><br>
+{% endblock %}
+</center>
+</body>
+</html>

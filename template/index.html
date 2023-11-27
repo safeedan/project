@@ -1,0 +1,25 @@
+{% extends 'bas.html' %}
+{% block body %}<br>
+<div class="container">
+    <div class="row">
+        {% for i in movie_list %}
+          <div class="col-md-3">
+              <div class="shadow card">
+                <img class="card-img-top" src="{{i.img.url}}" alt="" height="270">
+                <div class="card-body" style="background-color:dark" >
+                    <center>
+                        <h5 style="font-size:25px;font-family:Britannic Bold;color:white;" class="card-title"><b>{{i.name}}</b></h5>
+                    <a href="{% url  'movieapp:details' i.id %}" class="btn btn-warning"><b>View details</b></b></a>
+                        </center>
+                </div>
+            </div>
+              <br>
+          </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}
+
+
+

@@ -1,0 +1,21 @@
+{% extends 'bas.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<br><br><br><br><br><br><br>
+<center>
+<form style="font-size:25px;" method="post">
+    {% csrf_token %}
+  <b>  Are you want to delete this movie??</b><br><br>
+    <input type="submit" value="Delete">
+</form>
+</center>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+{% endblock %}
+</html>

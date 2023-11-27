@@ -1,0 +1,37 @@
+{% extends 'bas.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    meta charset="UTF-8">
+    <title>edit</title>
+</head>
+<body>
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{movie.img.url}}" width="400" height="400">
+        </div>
+        <div class="col-md-6">
+            <b><p style="font-size:40px;color:DARKBLUE;">{{movie.name}}</p></b>
+            <p style="font-size:20px;">{{movie.des}} </p>
+            <p style="font-size:20px;color:darkgreen;">year of the movie : {{movie.year}}</p>
+            <a class="btn btn-warning" href="{% url 'movieapp:update' movie.id %}">update</a>
+            <a class="btn btn-danger" href="{% url 'movieapp:delete' movie.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}
+</body>
+</html>
+<!--</p>-->
+<!--<p></p>-->
+<!--<p></p>-->
+<!--<p></p>-->
+<!--<p></p>-->
+<!--<p></p>-->
+<!--<p></p>-->
+<!--<p></p>-->
+<!--<p></p>-->
+<!--<p></p>-->
